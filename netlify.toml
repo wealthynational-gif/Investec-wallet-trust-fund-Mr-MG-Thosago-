@@ -1,9 +1,9 @@
 [build]
-  publish = "."
-  command = "echo 'Build complete'"
+  command = "npm run build"
+  publish = "dist"
 
-[context.production]
-  command = "echo 'Production build'"
+[build.environment]
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
@@ -13,7 +13,9 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "max-age=31536000, immutable"
