@@ -1,0 +1,29 @@
+{
+  "name": "investec-wallet-trust-fund",
+  "version": "1.0.0",
+  "description": "Investec Wallet Trust Fund Client Portal",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/",
+    "dev": "npx http-server . -p 3000",
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wealthynational-gif/Investec-wallet-trust-fund-Mr-MG-Thosago-.git"
+  },
+  "keywords": [
+    "investec",
+    "wallet",
+    "trust-fund"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wealthynational-gif/Investec-wallet-trust-fund-Mr-MG-Thosago-/issues"
+  },
+  "homepage": "https://github.com/wealthynational-gif/Investec-wallet-trust-fund-Mr-MG-Thosago-#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
